@@ -1,1 +1,1 @@
-python testtextfileforcontent.py
+python ./testtextfileforcontent.py

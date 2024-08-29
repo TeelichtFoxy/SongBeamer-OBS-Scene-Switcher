@@ -1,0 +1,1 @@
+start "" "C:/ES-OBS-Script-Dateien/starttesting.cmd.lnk"
