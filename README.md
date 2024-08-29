@@ -54,6 +54,17 @@ This project is used by the following companies:
 
 13. Set up the script with the ```scenes``` and set the ```refreshinterval```
 
-14. Close the window and see [Usage]() to learn how to use this Program
+14. Close the window and see [Usage](https://github.com/TeelichtFoxy/SongBeamer-OBS-Scene-Switcher#usage) to learn how to use this Program
 ## Usage
 
+1. Open SongBeamer
+
+2. Configure SongBeamer for usage with this program (Necessary every time you start SongBeamer):
+ - Click on ```Tools```/```Extras``` in the bar above
+ - Click on ```Output > Output to Text File...``` in the list
+ - Select the ```songbeamertextoutput.txt``` file in ```C:\ES-OBS-Script-Dateien```
+ - (Accept with ```yes``` if necessary)
+
+3. Start OBS
+
+4. Enjoy the automatic scene changing
