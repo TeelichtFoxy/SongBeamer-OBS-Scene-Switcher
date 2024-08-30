@@ -38,11 +38,12 @@ This project is used by the following companies:
 
 6. Install the OBS-Script
  - Open an terminal with admin rights
- - Run the following commands:
+ - Copy the following commands with (```Strg. + C``` + ```Strg. + V```) in the terminal:
    ```bash
-     cd Downloads
+     cd Downloads/SongBeamer-OBS-Scene-Switcher-main/SongBeamer-OBS-Scene-Switcher-main
      move "./automaticsceneswitcher.lua" "C:/Program Files/obs-studio/data/obs-plugins/frontend-tools/scripts/"
    ```
+- Press ```ENTER```
 
 7. To start the script automatically when Windows starts, do the following:
  - Copy the autostart .bat file (``` autostartsbobsautomaticsceneswitcher.bat ```) by clicking on the file and press (``` Strg. + C ```)
