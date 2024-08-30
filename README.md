@@ -32,6 +32,8 @@ This project is used by the following companies:
 4. Open the extracted folder (``` SongBeamer-OBS-Scene-Switcher-main/SongBeamer-OBS-Scene-Switcher-main ```)
 
 5. Run the installation script (``` install.cmd ```) by double-clicking it
+ - Click on ```More Informations```
+ - Click on ```Execute anyway```
  - (Confirm the installation with admin rights if necessary)
 
 6. To start the script automatically when Windows starts, do the following:
@@ -63,7 +65,7 @@ This project is used by the following companies:
  - Click on ```Tools```/```Extras``` in the bar above
  - Click on ```Output > Output to Text File...``` in the list
  - Select the ```songbeamertextoutput.txt``` file in ```C:\ES-OBS-Script-Dateien```
- - (Accept with ```yes``` if necessary)
+ - Accept with ```yes```
 
 3. Start OBS
 
