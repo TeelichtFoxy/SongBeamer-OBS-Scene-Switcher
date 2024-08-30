@@ -66,7 +66,9 @@ This project is used by the following companies:
 
 14. Set up the script with the ```scenes``` and set the ```refreshinterval```
 
-15. Close the window and see [Usage](https://github.com/TeelichtFoxy/SongBeamer-OBS-Scene-Switcher#usage) to learn how to use this Program
+15. Close the window and Restart your PC
+
+16. See [Usage](https://github.com/TeelichtFoxy/SongBeamer-OBS-Scene-Switcher#usage) to learn how to use this Program
 ## Usage
 
 1. Open SongBeamer
