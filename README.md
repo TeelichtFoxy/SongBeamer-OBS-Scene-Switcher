@@ -44,6 +44,7 @@ This project is used by the following companies:
      move "./automaticsceneswitcher.lua" "C:/Program Files/obs-studio/data/obs-plugins/frontend-tools/scripts/"
    ```
 - Press ```ENTER```
+- Close the terminal
 
 7. To start the script automatically when Windows starts, do the following:
  - Copy the autostart .bat file (``` autostartsbobsautomaticsceneswitcher.bat ```) by clicking on the file and press (``` Strg. + C ```)
