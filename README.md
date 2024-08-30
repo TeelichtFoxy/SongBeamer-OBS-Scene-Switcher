@@ -36,27 +36,35 @@ This project is used by the following companies:
  - Click on ```Execute anyway```
  - (Confirm the installation with admin rights if necessary)
 
-6. To start the script automatically when Windows starts, do the following:
+6. Install the OBS-Script
+ - Open an terminal with admin rights
+ - Run the following commands:
+   ```bash
+     cd Downloads
+     move "./automaticsceneswitcher.lua" "C:/Program Files/obs-studio/data/obs-plugins/frontend-tools/scripts/"
+   ```
+
+7. To start the script automatically when Windows starts, do the following:
  - Copy the autostart .bat file (``` autostartsbobsautomaticsceneswitcher.bat ```) by clicking on the file and press (``` Strg. + C ```)
  - Open the windows autostart folder (``` %APPDATA%/Microsoft/Windows/Startmenü/Programme/Autostart ```)
  - Press (``` Strg. + V ```) to paste the autostart .bat file in the folder
  - Close the folder
 
-7. Start OBS
+8. Start OBS
 
-8. (Follow the OBS setup if necessary)
+9. (Follow the OBS setup if necessary)
 
-9. Click on ```Tools``` in the bar above
+10. Click on ```Tools``` in the bar above
 
-10. Click on ```Scripts``` in the list
+11. Click on ```Scripts``` in the list
 
-11. Click on the ```+``` symbol
+12. Click on the ```+``` symbol
 
-12. Double-click the ```automaticsceneswitcher.lua``` file
+13. Double-click the ```automaticsceneswitcher.lua``` file
 
-13. Set up the script with the ```scenes``` and set the ```refreshinterval```
+14. Set up the script with the ```scenes``` and set the ```refreshinterval```
 
-14. Close the window and see [Usage](https://github.com/TeelichtFoxy/SongBeamer-OBS-Scene-Switcher#usage) to learn how to use this Program
+15. Close the window and see [Usage](https://github.com/TeelichtFoxy/SongBeamer-OBS-Scene-Switcher#usage) to learn how to use this Program
 ## Usage
 
 1. Open SongBeamer
