@@ -96,9 +96,11 @@ end
 function switch_to_scene(scene_name)
     print("switch_to_scene:" .. scene_name)
     local scene = obs.obs_get_scene_by_name(scene_name)
+    local current_scene_name = obs.obs_source_get_name(obs.obs_frontend_get_current_scene())
+    print("current scene: " .. current_scene_name)
     print("scene:" .. scene_name)
     if scene then
-        if scene == obs.obs_frontend_get_current_scene() then
+        if scene_name == current_scene_name then
             print("Szene ist bereits die aktuellste")
         else
             print("switching to scene: " .. scene_name)

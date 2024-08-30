@@ -15,9 +15,8 @@ while True:
             if any(c.isalpha() for c in f.read()):
                 print("Read File:", file_path)
                 if os.path.exists(truefile_path) != True:
-                    truefile = open(truefile_path, "w")
-                    truefile.write("true")
-                    truefile.close()
+                    with open(truefile_path, "w") as truefile:
+                        truefile.write("true")
                     print("Text Output - File created:", truefile_path)
                 else:
                     print("No changes...")
