@@ -2,17 +2,21 @@
 # SongBeamer OBS Scene Switcher
 
 Switches the Scenes automatically.
+
 ## Author
 
-[@teelicht_foxy](https://www.github.com/teelichtfoxy) ![Logo](http://teelichtfoxy.cgnord.de/images/foxy.png)
+[@teelicht_foxy](https://www.github.com/teelichtfoxy)
+
 ## Used By
 
 This project is used by the following companies:
 
-- [Christus Gemeinde Nord (Technik)](https://cgnord.de)
+- [Christus Gemeinde Nord](https://cgnord.de) (Technik)
+
 ## Supported Operating Systems
 
 - Windows 10/11
+
 ## Required Programs
 
 - [OBS 30.2.3](https://obsproject.com)
@@ -65,10 +69,22 @@ This project is used by the following companies:
 13. Double-click the ```automaticsceneswitcher.lua``` file
 
 14. Set up the script with the ```scenes``` and set the ```refreshinterval```
+![image](http://teelichtfoxy.cgnord.de/images/SB-OBS-Scene-Switcher-Settings.png)
 
-15. Close the window and Restart your PC
+15. Close the window
 
-16. See [Usage](https://github.com/TeelichtFoxy/SongBeamer-OBS-Scene-Switcher#usage) to learn how to use this Program
+16. Click on ```File``` in the bar above
+
+17. Click on ```Settings``` in the list
+
+18. Click on ```Hotkeys```
+
+19. Set your hotkeys to pause and continue switching
+![image](http://teelichtfoxy.cgnord.de/images/SB-OBS-Scene-Switcher-Hotkeys.png)
+
+20. Close the window and Restart your PC
+
+21. See [Usage](https://github.com/TeelichtFoxy/SongBeamer-OBS-Scene-Switcher#usage) to learn how to use this Program
 ## Usage
 
 1. Open SongBeamer
@@ -82,3 +98,4 @@ This project is used by the following companies:
 3. Start OBS
 
 4. Enjoy the automatic scene changing
+![Logo](http://teelichtfoxy.cgnord.de/images/foxy.png)
