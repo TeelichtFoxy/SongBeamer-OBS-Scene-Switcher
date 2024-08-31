@@ -4,7 +4,6 @@ PROJECTOR_TYPE_SCENE = "Scene"
 PROJECTOR_TYPE_PROGRAM = "StudioProgram"
 
 VARS_GROUP = "vgp"
-QUELLEN_GROUP = "qgp"
 SCENES_GROUP = "sgp"
 PROGRAM = "Program Output"
 STARTUP = "su"
@@ -13,7 +12,6 @@ refreshTime = 1000  -- default refresh time
 local sceneText = ""
 local sceneMedia = ""
 local scenePause = ""
-local ndiSource = ""
 scene = ""
 
 function script_description()
@@ -22,22 +20,11 @@ end
 
 function script_properties()
     local props = obs.obs_properties_create()
-    local qgp = obs.obs_properties_create()
     local sgp = obs.obs_properties_create()
     local vgp = obs.obs_properties_create()
 
-    obs.obs_properties_add_int(vgp, "refreshTime", "Wiederholungsintervall (ms)", 1000, 2000, 100)
+    obs.obs_properties_add_int(vgp, "refreshTime", "Wiederholungsintervall (ms)", 500, 2000, 100)
     obs.obs_properties_add_group(props, VARS_GROUP, "Variablen", obs.OBS_GROUP_NORMAL, vgp)
-
-    local ql = obs.obs_properties_add_list(qgp, "ndiSource", "NDI Quelle", obs.OBS_COMBO_TYPE_EDITABLE, obs.OBS_COMBO_FORMAT_STRING)
-    local sources = obs.obs_enum_sources()
-    if sources ~= nil then
-        for _, source in ipairs(sources) do
-            local name = obs.obs_source_get_name(source)
-            obs.obs_property_list_add_string(ql, name, name)
-        end
-    end
-    obs.obs_properties_add_group(props, QUELLEN_GROUP, "Quellen", obs.OBS_GROUP_NORMAL, qgp)
 
     local scenes = obs.obs_frontend_get_scenes()
     local stl = obs.obs_properties_add_list(sgp, "sceneText", "Text Szene", obs.OBS_COMBO_TYPE_EDITABLE, obs.OBS_COMBO_FORMAT_STRING)
@@ -62,6 +49,18 @@ function script_update(settings)
     sceneMedia = obs.obs_data_get_string(settings, "sceneMedia")
     scenePause = obs.obs_data_get_string(settings, "scenePause")
 
+    obs.obs_hotkey_unregister(pause_switching)
+    hotkeyPause = obs.obs_hotkey_register_frontend("pauseSwitch", "Pause Switching (Strg + Alt + P   f. e.)", pause_switching)
+    local hotkey_save_array = obs.obs_data_get_array(settings, "pauseSwitch")
+    obs.obs_hotkey_load(hotkeyPause, hotkey_save_array)
+    obs.obs_data_array_release(hotkey_save_array)
+
+    obs.obs_hotkey_unregister(continue_switching)
+    hotkeyContinue = obs.obs_hotkey_register_frontend("continueSwitch", "Continue Switching (Strg + Alt + O   f. e.)", continue_switching)
+    local hotkey_save_array = obs.obs_data_get_array(settings, "continueSwitch")
+    obs.obs_hotkey_load(hotkeyContinue, hotkey_save_array)
+    obs.obs_data_array_release(hotkey_save_array)
+
     obs.timer_remove(switcher)
     obs.timer_add(switcher, refreshTime)
 end
@@ -71,6 +70,12 @@ function script_load(settings)
     sceneText = obs.obs_data_get_string(settings, "sceneText")
     sceneMedia = obs.obs_data_get_string(settings, "sceneMedia")
     scenePause = obs.obs_data_get_string(settings, "scenePause")
+
+    obs.obs_hotkey_unregister(pause_switching)
+    hotkeyPause = obs.obs_hotkey_register_frontend("pauseSwitch", "Pause Switch (Strg + Alt + P   f. e.)", pause_switching)
+    local hotkey_save_array = obs.obs_data_get_array(settings, "pauseSwitch")
+    obs.obs_hotkey_load(hotkeyPause, hotkey_save_array)
+    obs.obs_data_array_release(hotkey_save_array)
 
     obs.timer_remove(switcher)
     obs.timer_add(switcher, refreshTime)
@@ -109,7 +114,15 @@ function switch_to_scene(scene_name)
             obs.obs_source_release(scene_source)
             obs.obs_scene_release(scene)
         end
-    else
-        print("Scene not found: " .. scene_name)
     end
+end
+
+function pause_switching()
+    obs.timer_remove(switcher)
+    switch_to_scene(scenePause)
+end
+
+function continue_switching()
+    obs.timer_add(switcher, refreshTime)
+    switch_to_scene(sceneText)
 end
