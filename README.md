@@ -68,7 +68,8 @@ This project is used by the following companies:
 
 13. Double-click the ```automaticsceneswitcher.lua``` file
 
-14. Set up the script with the ```scenes``` and set the ```refreshinterval``` ![image](http://teelichtfoxy.cgnord.de/images/SB-OBS-Scene-Switcher-Settings.png)
+14. Set up the script with the ```scenes``` and set the ```refreshinterval```
+- ![image](http://teelichtfoxy.cgnord.de/images/SB-OBS-Scene-Switcher-Settings.png)
 
 
 15. Close the window
