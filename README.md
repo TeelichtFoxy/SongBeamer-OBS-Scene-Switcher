@@ -71,6 +71,7 @@ This project is used by the following companies:
 14. Set up the script with the ```scenes``` and set the ```refreshinterval```
 ![image](http://teelichtfoxy.cgnord.de/images/SB-OBS-Scene-Switcher-Settings.png)
 
+
 15. Close the window
 
 16. Click on ```File``` in the bar above
