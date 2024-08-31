@@ -4,7 +4,7 @@
 Switches the Scenes automatically.
 ## Author
 
-[@teelicht_foxy](https://www.github.com/teelichtfoxy)
+[@teelicht_foxy](https://www.github.com/teelichtfoxy) ![Logo](http://teelichtfoxy.cgnord.de/images/foxy.png)
 ## Used By
 
 This project is used by the following companies:
