@@ -81,7 +81,7 @@ This project is used by the following companies:
 18. Click on ```Hotkeys```
 
 19. Set your hotkeys to pause and continue switching
-![image](http://teelichtfoxy.cgnord.de/images/SB-OBS-Scene-Switcher-Hotkeys.png)
+- ![image](http://teelichtfoxy.cgnord.de/images/SB-OBS-Scene-Switcher-Hotkeys.png)
 
 20. Close the window and Restart your PC
 
