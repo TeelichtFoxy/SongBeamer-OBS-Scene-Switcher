@@ -99,4 +99,6 @@ This project is used by the following companies:
 3. Start OBS
 
 4. Enjoy the automatic scene changing
+ - To pause automatic switching: ```Strg. + Alt. + P``` (Or your personal Keybinds)
+ - To continue automatic switching: ```Strg. + Alt. + O``` (Or your personal Keybinds)
 ![Logo](http://teelichtfoxy.cgnord.de/images/foxy.png)
